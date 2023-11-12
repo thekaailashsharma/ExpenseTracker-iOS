@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8422D92A2B00C6FC00BF112A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422D9292B00C6FC00BF112A /* Extensions.swift */; };
-		843701C42AFFE7D20038B1C7 /* foldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701C32AFFE7D20038B1C7 /* foldApp.swift */; };
+		843701C42AFFE7D20038B1C7 /* expenseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701C32AFFE7D20038B1C7 /* expenseTracker.swift */; };
 		843701C62AFFE7D20038B1C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843701C52AFFE7D20038B1C7 /* ContentView.swift */; };
 		843701C82AFFE7D60038B1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843701C72AFFE7D60038B1C7 /* Assets.xcassets */; };
 		843701CB2AFFE7D60038B1C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843701CA2AFFE7D60038B1C7 /* Preview Assets.xcassets */; };
@@ -20,9 +20,9 @@
 
 /* Begin PBXFileReference section */
 		8422D9292B00C6FC00BF112A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		843701C02AFFE7D20038B1C7 /* fold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fold.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		843701C32AFFE7D20038B1C7 /* foldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foldApp.swift; sourceTree = "<group>"; };
-		843701C52AFFE7D20038B1C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		843701C02AFFE7D20038B1C7 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		843701C32AFFE7D20038B1C7 /* expenseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expenseTracker.swift; sourceTree = "<group>"; };
+		843701C52AFFE7D20038B1C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		843701C72AFFE7D60038B1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843701CA2AFFE7D60038B1C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84A557552B00D9D400F76ED1 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		843701B72AFFE7D20038B1C7 = {
 			isa = PBXGroup;
 			children = (
-				843701C22AFFE7D20038B1C7 /* fold */,
+				843701C22AFFE7D20038B1C7 /* expenseTracker */,
 				843701C12AFFE7D20038B1C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,15 +53,15 @@
 		843701C12AFFE7D20038B1C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				843701C02AFFE7D20038B1C7 /* fold.app */,
+				843701C02AFFE7D20038B1C7 /* ExpenseTracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		843701C22AFFE7D20038B1C7 /* fold */ = {
+		843701C22AFFE7D20038B1C7 /* expenseTracker */ = {
 			isa = PBXGroup;
 			children = (
-				843701C32AFFE7D20038B1C7 /* foldApp.swift */,
+				843701C32AFFE7D20038B1C7 /* expenseTracker.swift */,
 				84A557592B00E3F500F76ED1 /* TransactionRow.swift */,
 				84A557552B00D9D400F76ED1 /* Transactions.swift */,
 				8422D9292B00C6FC00BF112A /* Extensions.swift */,
@@ -69,7 +69,7 @@
 				843701C72AFFE7D60038B1C7 /* Assets.xcassets */,
 				843701C92AFFE7D60038B1C7 /* Preview Content */,
 			);
-			path = fold;
+			path = expenseTracker;
 			sourceTree = "<group>";
 		};
 		843701C92AFFE7D60038B1C7 /* Preview Content */ = {
@@ -84,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		843701BF2AFFE7D20038B1C7 /* fold */ = {
+		843701BF2AFFE7D20038B1C7 /* ExpenseTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 843701CE2AFFE7D60038B1C7 /* Build configuration list for PBXNativeTarget "fold" */;
+			buildConfigurationList = 843701CE2AFFE7D60038B1C7 /* Build configuration list for PBXNativeTarget "ExpenseTracker" */;
 			buildPhases = (
 				843701BC2AFFE7D20038B1C7 /* Sources */,
 				843701BD2AFFE7D20038B1C7 /* Frameworks */,
@@ -96,12 +96,12 @@
 			);
 			dependencies = (
 			);
-			name = fold;
+			name = ExpenseTracker;
 			packageProductDependencies = (
 				84A5575C2B00F01000F76ED1 /* SwiftUIFontIcon */,
 			);
 			productName = fold;
-			productReference = 843701C02AFFE7D20038B1C7 /* fold.app */;
+			productReference = 843701C02AFFE7D20038B1C7 /* ExpenseTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 843701BB2AFFE7D20038B1C7 /* Build configuration list for PBXProject "fold" */;
+			buildConfigurationList = 843701BB2AFFE7D20038B1C7 /* Build configuration list for PBXProject "expenseTracker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				843701BF2AFFE7D20038B1C7 /* fold */,
+				843701BF2AFFE7D20038B1C7 /* ExpenseTracker */,
 			);
 		};
 /* End PBXProject section */
@@ -162,7 +162,7 @@
 				8422D92A2B00C6FC00BF112A /* Extensions.swift in Sources */,
 				84A5575A2B00E3F500F76ED1 /* TransactionRow.swift in Sources */,
 				84A557562B00D9D400F76ED1 /* Transactions.swift in Sources */,
-				843701C42AFFE7D20038B1C7 /* foldApp.swift in Sources */,
+				843701C42AFFE7D20038B1C7 /* expenseTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +290,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"fold/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"expenseTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = X9QZ4KQXLR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -319,7 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"fold/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"expenseTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = X9QZ4KQXLR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -344,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		843701BB2AFFE7D20038B1C7 /* Build configuration list for PBXProject "fold" */ = {
+		843701BB2AFFE7D20038B1C7 /* Build configuration list for PBXProject "expenseTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				843701CC2AFFE7D60038B1C7 /* Debug */,
@@ -353,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		843701CE2AFFE7D60038B1C7 /* Build configuration list for PBXNativeTarget "fold" */ = {
+		843701CE2AFFE7D60038B1C7 /* Build configuration list for PBXNativeTarget "ExpenseTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				843701CF2AFFE7D60038B1C7 /* Debug */,
