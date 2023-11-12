@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Transaction : Identifiable {
+struct Transaction : Identifiable, Decodable {
     let id: Int
     let date: String
     let institution: String
     let account: String
     var merchant: String
     let amount: Double
-    let categoryID: Int
+    let categoryId: Int
     let category: String
     let isPending: Bool
     var isTransfer: Bool = false
     var isExpense: Bool = false
-    var isEddited: Bool = false
+    var isEdited: Bool = false
     let type: TransactionType.RawValue
     
     var dateParsed: Date {

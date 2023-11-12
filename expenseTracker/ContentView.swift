@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var transactionViewModel: TransactionViewModel
     var body: some View {
         NavigationView {
             ScrollView {
@@ -15,6 +16,10 @@ struct ContentView: View {
                     Text("Overview")
                         .font(.title2)
                         .bold()
+                    
+                    ForEach(transactionViewModel.transaction, id: \.id) { transactions in
+                        TransactionRow(transaction: transactions)
+                    }
                     
                 }
                 .padding()
@@ -36,14 +41,14 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews_Light: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-struct ContentView_Previews_Dark: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews_Light: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
+//
+//struct ContentView_Previews_Dark: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
