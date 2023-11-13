@@ -17,9 +17,7 @@ struct ContentView: View {
                         .font(.title2)
                         .bold()
                     
-                    ForEach(transactionViewModel.transaction, id: \.id) { transactions in
-                        TransactionRow(transaction: transactions)
-                    }
+                    RecentTransactions()
                     
                 }
                 .padding()
@@ -41,14 +39,27 @@ struct ContentView: View {
     }
 }
 
-//struct ContentView_Previews_Light: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-//
-//struct ContentView_Previews_Dark: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews_Light: PreviewProvider {
+    static let transactionsDummyList: TransactionViewModel = {
+        let transactionsDummyList = TransactionViewModel()
+        transactionsDummyList.transaction = transactionslist
+        return transactionsDummyList
+    }()
+    
+    static var previews: some View {
+        ContentView()
+            .environmentObject(transactionsDummyList)
+    }
+}
+
+struct ContentView_Previews_Dark: PreviewProvider {
+    static let transactionsDummyList: TransactionViewModel = {
+        let transactionsDummyList = TransactionViewModel()
+        transactionsDummyList.transaction = transactionslist
+        return transactionsDummyList
+    }()
+    static var previews: some View {
+        ContentView()
+            .environmentObject(transactionsDummyList)
+    }
+}

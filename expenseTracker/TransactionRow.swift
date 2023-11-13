@@ -18,7 +18,7 @@ struct TransactionRow: View {
                 .fill(Color.iconColor.opacity(0.3))
                 .frame(width: 44, height: 44)
                 .overlay {
-                    FontIcon.text(FontCode.awesome5Solid(code: .icons), fontsize: 20
+                    FontIcon.text(FontCode.awesome5Solid(code: transaction.icon), fontsize: 20
                                   ,color: .iconColor)
                 }
 
