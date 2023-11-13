@@ -16,6 +16,8 @@ struct ContentView: View {
                     Text("Overview")
                         .font(.title2)
                         .bold()
+
+                    ChartView()
                     
                     RecentTransactions()
                     
@@ -35,7 +37,7 @@ struct ContentView: View {
             }
         }
         .navigationViewStyle(.stack)
-        
+        .tint(.primary)
     }
 }
 

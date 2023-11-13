@@ -34,6 +34,7 @@ struct AllTransactions: View {
         }
         .navigationTitle("Transactions")
         .navigationBarTitleDisplayMode(.inline)
+        .tint(.primary)
     }
 }
 
