@@ -38,6 +38,10 @@ struct Transaction : Identifiable, Decodable, Hashable {
             return .question
         }
     }
+    
+    var month : String {
+        return dateParsed.formatted(.dateTime.year().month(.wide))
+    }
 }
 
 enum TransactionType: String {

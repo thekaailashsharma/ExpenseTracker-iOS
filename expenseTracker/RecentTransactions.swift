@@ -22,7 +22,7 @@ struct RecentTransactions: View {
                     Spacer()
                     
                     NavigationLink {
-                        
+                       AllTransactions()
                     } label: {
                         HStack {
                             Text("See all")

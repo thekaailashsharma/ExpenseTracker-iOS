@@ -18,6 +18,7 @@
 		84A5575A2B00E3F500F76ED1 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A557592B00E3F500F76ED1 /* TransactionRow.swift */; };
 		84A5575D2B00F01000F76ED1 /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 84A5575C2B00F01000F76ED1 /* SwiftUIFontIcon */; };
 		84BC73B62B021B410086C87B /* RecentTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC73B52B021B410086C87B /* RecentTransactions.swift */; };
+		84BC73B82B023DAE0086C87B /* All Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC73B72B023DAE0086C87B /* All Transactions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		84A557572B00E29E00F76ED1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		84A557592B00E3F500F76ED1 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		84BC73B52B021B410086C87B /* RecentTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactions.swift; sourceTree = "<group>"; };
+		84BC73B72B023DAE0086C87B /* All Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "All Transactions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				84BC73B52B021B410086C87B /* RecentTransactions.swift */,
 				843701C72AFFE7D60038B1C7 /* Assets.xcassets */,
 				843701C92AFFE7D60038B1C7 /* Preview Content */,
+				84BC73B72B023DAE0086C87B /* All Transactions.swift */,
 			);
 			path = expenseTracker;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				84A557562B00D9D400F76ED1 /* Transactions.swift in Sources */,
 				84BC73B62B021B410086C87B /* RecentTransactions.swift in Sources */,
 				843701C42AFFE7D20038B1C7 /* expenseTracker.swift in Sources */,
+				84BC73B82B023DAE0086C87B /* All Transactions.swift in Sources */,
 				847798D92B0135FC00DD21A8 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
