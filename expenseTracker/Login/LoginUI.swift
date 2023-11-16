@@ -160,7 +160,9 @@ struct LoginUI: View {
                             }
                             
                             print(authResult ?? "")
-                            isLoginScreenVisible = false
+                            withAnimation {
+                                isLoginScreenVisible = false
+                            }
                         }
                     }
                 } label: {

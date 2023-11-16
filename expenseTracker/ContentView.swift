@@ -18,8 +18,8 @@ struct ContentView: View {
     var isLoginScreenVisible: Bool?
     
     var body: some View {
-        NavigationView {
-            if !(isLoginScreenVisible ?? true) {
+        if (!(isLoginScreenVisible ?? true)) {
+            NavigationView {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         Text("Overview")
@@ -27,17 +27,14 @@ struct ContentView: View {
                             .bold()
                         
                         Button {
-                            PhoneAuthProvider.provider()
-                                .verifyPhoneNumber("+919326405547", uiDelegate: nil) { verificationID, error in
-                                    if let error = error {
-                                        text = error.localizedDescription
-                                        dump(error.localizedDescription)
-                                        return
-                                    }
-                                    text = "OTP Sent"
-                                }
+                            isLoginScreenVisible = true
                         } label: {
-                            Text(text)
+                            if (isLoginScreenVisible ?? true){
+                                Text("true")
+                            } else {
+                                Text("false")
+                            }
+                            
                         }
                         
                         
@@ -59,16 +56,21 @@ struct ContentView: View {
                         
                     }
                 }
+                
+                
             }
-            else {
-                LoginUI()
-            }
-        }
-        .navigationViewStyle(.stack)
-        .tint(.primary)
+            .animation(.easeIn, value: isLoginScreenVisible)
+            .navigationViewStyle(.stack)
+            .tint(.primary)
             
+            
+        } else {
+            LoginUI()
+                .animation(.easeIn, value: isLoginScreenVisible)
+        }
     }
 }
+
 
 struct ContentView_Previews_Light: PreviewProvider {
     static let transactionsDummyList: TransactionViewModel = {
