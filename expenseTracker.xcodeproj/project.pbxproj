@@ -29,6 +29,12 @@
 		84C6BE452B061D4200B9CB29 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE442B061D4200B9CB29 /* FirebaseMessaging */; };
 		84C6BE472B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE462B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta */; };
 		84C6BE492B061D8300B9CB29 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE482B061D8300B9CB29 /* FirebaseInAppMessaging-Beta */; };
+		84C6BE4D2B06216A00B9CB29 /* LoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6BE4C2B06216A00B9CB29 /* LoginUI.swift */; };
+		84C6BE512B0623EE00B9CB29 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE502B0623EE00B9CB29 /* Lottie */; };
+		84C6BE542B06247600B9CB29 /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6BE532B06247600B9CB29 /* LottieAnimation.swift */; };
+		84C6BE562B0625CD00B9CB29 /* login.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 84C6BE552B0625CD00B9CB29 /* login.lottie */; };
+		84C6BE582B062CEE00B9CB29 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6BE572B062CEE00B9CB29 /* LoginViewModel.swift */; };
+		84C6BE5A2B06348A00B9CB29 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6BE592B06348A00B9CB29 /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,11 @@
 		84BC73C12B0244FB0086C87B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		84C6BE3B2B0609D600B9CB29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84C6BE422B06129F00B9CB29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ExpenseTracker/Info.plist; sourceTree = "<group>"; };
+		84C6BE4C2B06216A00B9CB29 /* LoginUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUI.swift; sourceTree = "<group>"; };
+		84C6BE532B06247600B9CB29 /* LottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimation.swift; sourceTree = "<group>"; };
+		84C6BE552B0625CD00B9CB29 /* login.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = login.lottie; sourceTree = "<group>"; };
+		84C6BE572B062CEE00B9CB29 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		84C6BE592B06348A00B9CB29 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,7 @@
 				84C6BE492B061D8300B9CB29 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				84C6BE472B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				84C6BE452B061D4200B9CB29 /* FirebaseMessaging in Frameworks */,
+				84C6BE512B0623EE00B9CB29 /* Lottie in Frameworks */,
 				84C6BE3F2B060ABA00B9CB29 /* FirebaseAuth in Frameworks */,
 				84BC73C02B0244D30086C87B /* SwiftUICharts in Frameworks */,
 				84A5575D2B00F01000F76ED1 /* SwiftUIFontIcon in Frameworks */,
@@ -90,12 +102,15 @@
 		843701C22AFFE7D20038B1C7 /* expenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				84C6BE522B06244F00B9CB29 /* LottieAnimation */,
+				84C6BE4B2B06214E00B9CB29 /* Login */,
 				843701C32AFFE7D20038B1C7 /* expenseTracker.swift */,
 				84A557592B00E3F500F76ED1 /* TransactionRow.swift */,
 				84A557552B00D9D400F76ED1 /* Transactions.swift */,
 				8422D9292B00C6FC00BF112A /* Extensions.swift */,
 				847798D82B0135FC00DD21A8 /* TransactionViewModel.swift */,
 				843701C52AFFE7D20038B1C7 /* ContentView.swift */,
+				84C6BE552B0625CD00B9CB29 /* login.lottie */,
 				84BC73C12B0244FB0086C87B /* ChartView.swift */,
 				84BC73B72B023DAE0086C87B /* All Transactions.swift */,
 				84BC73B52B021B410086C87B /* RecentTransactions.swift */,
@@ -120,6 +135,24 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84C6BE4B2B06214E00B9CB29 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84C6BE4C2B06216A00B9CB29 /* LoginUI.swift */,
+				84C6BE572B062CEE00B9CB29 /* LoginViewModel.swift */,
+				84C6BE592B06348A00B9CB29 /* Countries.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84C6BE522B06244F00B9CB29 /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				84C6BE532B06247600B9CB29 /* LottieAnimation.swift */,
+			);
+			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +181,7 @@
 				84C6BE442B061D4200B9CB29 /* FirebaseMessaging */,
 				84C6BE462B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta */,
 				84C6BE482B061D8300B9CB29 /* FirebaseInAppMessaging-Beta */,
+				84C6BE502B0623EE00B9CB29 /* Lottie */,
 			);
 			productName = fold;
 			productReference = 843701C02AFFE7D20038B1C7 /* ExpenseTracker.app */;
@@ -182,6 +216,8 @@
 				84BC73B92B02432F0086C87B /* XCRemoteSwiftPackageReference "swift-collections" */,
 				84BC73BE2B0244D30086C87B /* XCRemoteSwiftPackageReference "ChartView" */,
 				84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				84C6BE4F2B0623EE00B9CB29 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				84A14BAB2B06666100531264 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 843701C12AFFE7D20038B1C7 /* Products */;
 			projectDirPath = "";
@@ -197,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C6BE562B0625CD00B9CB29 /* login.lottie in Resources */,
 				843701CB2AFFE7D60038B1C7 /* Preview Assets.xcassets in Resources */,
 				843701C82AFFE7D60038B1C7 /* Assets.xcassets in Resources */,
 				84C6BE3C2B0609D600B9CB29 /* GoogleService-Info.plist in Resources */,
@@ -213,12 +250,16 @@
 				84A557582B00E29E00F76ED1 /* PreviewData.swift in Sources */,
 				843701C62AFFE7D20038B1C7 /* ContentView.swift in Sources */,
 				8422D92A2B00C6FC00BF112A /* Extensions.swift in Sources */,
+				84C6BE4D2B06216A00B9CB29 /* LoginUI.swift in Sources */,
 				84BC73C22B0244FB0086C87B /* ChartView.swift in Sources */,
+				84C6BE542B06247600B9CB29 /* LottieAnimation.swift in Sources */,
 				84A5575A2B00E3F500F76ED1 /* TransactionRow.swift in Sources */,
 				84A557562B00D9D400F76ED1 /* Transactions.swift in Sources */,
+				84C6BE582B062CEE00B9CB29 /* LoginViewModel.swift in Sources */,
 				84BC73B62B021B410086C87B /* RecentTransactions.swift in Sources */,
 				843701C42AFFE7D20038B1C7 /* expenseTracker.swift in Sources */,
 				84BC73B82B023DAE0086C87B /* All Transactions.swift in Sources */,
+				84C6BE5A2B06348A00B9CB29 /* Countries.swift in Sources */,
 				847798D92B0135FC00DD21A8 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +471,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		84A14BAB2B06666100531264 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.8;
+			};
+		};
 		84A5575B2B00F01000F76ED1 /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/huybuidac/SwiftUIFontIcon";
@@ -460,6 +509,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.18.0;
+			};
+		};
+		84C6BE4F2B0623EE00B9CB29 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -509,6 +566,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseInAppMessaging-Beta";
+		};
+		84C6BE502B0623EE00B9CB29 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C6BE4F2B0623EE00B9CB29 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

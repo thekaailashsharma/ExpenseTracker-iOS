@@ -14,50 +14,59 @@ struct ContentView: View {
     @EnvironmentObject var transactionViewModel: TransactionViewModel
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @State var text = "Continue for verification"
+    @AppStorage("isLoginScreenVisible")
+    var isLoginScreenVisible: Bool?
+    
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    Text("Overview")
-                        .font(.title2)
-                        .bold()
-                    
-                    Button {
-                        PhoneAuthProvider.provider()
-                            .verifyPhoneNumber("+919326405547", uiDelegate: nil) { verificationID, error in
-                              if let error = error {
-                                  text = error.localizedDescription
-                                  dump(error.localizedDescription)
-                                return
-                              }
-                              text = "OTP Sent"
-                          }
-                    } label: {
-                        Text(text)
+            if !(isLoginScreenVisible ?? true) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("Overview")
+                            .font(.title2)
+                            .bold()
+                        
+                        Button {
+                            PhoneAuthProvider.provider()
+                                .verifyPhoneNumber("+919326405547", uiDelegate: nil) { verificationID, error in
+                                    if let error = error {
+                                        text = error.localizedDescription
+                                        dump(error.localizedDescription)
+                                        return
+                                    }
+                                    text = "OTP Sent"
+                                }
+                        } label: {
+                            Text(text)
+                        }
+                        
+                        
+                        ChartView()
+                        
+                        RecentTransactions()
+                        
                     }
-
-
-                    ChartView()
-                    
-                    RecentTransactions()
-                    
+                    .padding()
+                    .frame(maxWidth: .infinity)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
+                .background(Color.background)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem {
+                        Image(systemName: "bell.badge")
+                            .renderingMode(.original)
+                            .foregroundStyle(Color.iconColor, .primary)
+                        
+                    }
+                }
             }
-            .background(Color.background)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem {
-                    Image(systemName: "bell.badge")
-                        .renderingMode(.original)
-                        .foregroundStyle(Color.iconColor, .primary)
-                    
-                }
+            else {
+                LoginUI()
             }
         }
         .navigationViewStyle(.stack)
         .tint(.primary)
+            
     }
 }
 

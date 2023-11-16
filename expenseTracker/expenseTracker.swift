@@ -79,6 +79,7 @@ struct expenseTracker: App {
     
     @StateObject var transactionViewModel = TransactionViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @ObservedObject var appColor = AppColor()
 
     
     var body: some Scene {
@@ -87,4 +88,8 @@ struct expenseTracker: App {
                 .environmentObject(transactionViewModel)
         }
     }
+}
+
+class AppColor: ObservableObject {
+  @Published var tint:Color = .textColor
 }

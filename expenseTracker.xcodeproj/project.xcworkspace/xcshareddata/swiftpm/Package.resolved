@@ -100,6 +100,15 @@
       }
     },
     {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3d46f3fab87bc390466cbca9762cb290e95eae40"
+      }
+    },
+    {
       "identity" : "nanopb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/nanopb.git",
@@ -142,6 +151,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "4f170fbf443d985ae518a14a12ec8194ec6b08eb"
+      }
+    },
+    {
+      "identity" : "swiftuix",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftUIX/SwiftUIX",
+      "state" : {
+        "revision" : "e1a37c6fe6c32e16598ee759b2fcf54676325825",
+        "version" : "0.1.8"
       }
     }
   ],
