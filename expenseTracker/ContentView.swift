@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import AuthenticationServices
+import Firebase
+import Combine
 
 struct ContentView: View {
     @EnvironmentObject var transactionViewModel: TransactionViewModel
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @State var text = "Continue for verification"
     var body: some View {
         NavigationView {
             ScrollView {
@@ -16,6 +21,21 @@ struct ContentView: View {
                     Text("Overview")
                         .font(.title2)
                         .bold()
+                    
+                    Button {
+                        PhoneAuthProvider.provider()
+                            .verifyPhoneNumber("+919326405547", uiDelegate: nil) { verificationID, error in
+                              if let error = error {
+                                  text = error.localizedDescription
+                                  dump(error.localizedDescription)
+                                return
+                              }
+                              text = "OTP Sent"
+                          }
+                    } label: {
+                        Text(text)
+                    }
+
 
                     ChartView()
                     

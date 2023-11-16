@@ -23,6 +23,12 @@
 		84BC73BD2B02432F0086C87B /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 84BC73BC2B02432F0086C87B /* OrderedCollections */; };
 		84BC73C02B0244D30086C87B /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 84BC73BF2B0244D30086C87B /* SwiftUICharts */; };
 		84BC73C22B0244FB0086C87B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC73C12B0244FB0086C87B /* ChartView.swift */; };
+		84C6BE3C2B0609D600B9CB29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C6BE3B2B0609D600B9CB29 /* GoogleService-Info.plist */; };
+		84C6BE3F2B060ABA00B9CB29 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE3E2B060ABA00B9CB29 /* FirebaseAuth */; };
+		84C6BE412B060ABA00B9CB29 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE402B060ABA00B9CB29 /* FirebaseAuthCombine-Community */; };
+		84C6BE452B061D4200B9CB29 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE442B061D4200B9CB29 /* FirebaseMessaging */; };
+		84C6BE472B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE462B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta */; };
+		84C6BE492B061D8300B9CB29 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 84C6BE482B061D8300B9CB29 /* FirebaseInAppMessaging-Beta */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,8 @@
 		84BC73B52B021B410086C87B /* RecentTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactions.swift; sourceTree = "<group>"; };
 		84BC73B72B023DAE0086C87B /* All Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "All Transactions.swift"; sourceTree = "<group>"; };
 		84BC73C12B0244FB0086C87B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		84C6BE3B2B0609D600B9CB29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84C6BE422B06129F00B9CB29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ExpenseTracker/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BC73BB2B02432F0086C87B /* Collections in Frameworks */,
+				84C6BE412B060ABA00B9CB29 /* FirebaseAuthCombine-Community in Frameworks */,
+				84C6BE492B061D8300B9CB29 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				84C6BE472B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				84C6BE452B061D4200B9CB29 /* FirebaseMessaging in Frameworks */,
+				84C6BE3F2B060ABA00B9CB29 /* FirebaseAuth in Frameworks */,
 				84BC73C02B0244D30086C87B /* SwiftUICharts in Frameworks */,
 				84A5575D2B00F01000F76ED1 /* SwiftUIFontIcon in Frameworks */,
 				84BC73BD2B02432F0086C87B /* OrderedCollections in Frameworks */,
@@ -59,8 +72,10 @@
 		843701B72AFFE7D20038B1C7 = {
 			isa = PBXGroup;
 			children = (
+				84C6BE422B06129F00B9CB29 /* Info.plist */,
 				843701C22AFFE7D20038B1C7 /* expenseTracker */,
 				843701C12AFFE7D20038B1C7 /* Products */,
+				84C6BE432B061D4200B9CB29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +100,7 @@
 				84BC73B72B023DAE0086C87B /* All Transactions.swift */,
 				84BC73B52B021B410086C87B /* RecentTransactions.swift */,
 				843701C72AFFE7D60038B1C7 /* Assets.xcassets */,
+				84C6BE3B2B0609D600B9CB29 /* GoogleService-Info.plist */,
 				843701C92AFFE7D60038B1C7 /* Preview Content */,
 			);
 			path = expenseTracker;
@@ -97,6 +113,13 @@
 				84A557572B00E29E00F76ED1 /* PreviewData.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84C6BE432B061D4200B9CB29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +143,11 @@
 				84BC73BA2B02432F0086C87B /* Collections */,
 				84BC73BC2B02432F0086C87B /* OrderedCollections */,
 				84BC73BF2B0244D30086C87B /* SwiftUICharts */,
+				84C6BE3E2B060ABA00B9CB29 /* FirebaseAuth */,
+				84C6BE402B060ABA00B9CB29 /* FirebaseAuthCombine-Community */,
+				84C6BE442B061D4200B9CB29 /* FirebaseMessaging */,
+				84C6BE462B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta */,
+				84C6BE482B061D8300B9CB29 /* FirebaseInAppMessaging-Beta */,
 			);
 			productName = fold;
 			productReference = 843701C02AFFE7D20038B1C7 /* ExpenseTracker.app */;
@@ -153,6 +181,7 @@
 				84A5575B2B00F01000F76ED1 /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
 				84BC73B92B02432F0086C87B /* XCRemoteSwiftPackageReference "swift-collections" */,
 				84BC73BE2B0244D30086C87B /* XCRemoteSwiftPackageReference "ChartView" */,
+				84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 843701C12AFFE7D20038B1C7 /* Products */;
 			projectDirPath = "";
@@ -170,6 +199,7 @@
 			files = (
 				843701CB2AFFE7D60038B1C7 /* Preview Assets.xcassets in Resources */,
 				843701C82AFFE7D60038B1C7 /* Assets.xcassets in Resources */,
+				84C6BE3C2B0609D600B9CB29 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,15 +345,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"expenseTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = X9QZ4KQXLR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,6 +366,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.money.fold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,15 +378,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"expenseTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = X9QZ4KQXLR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +399,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.money.fold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,6 +454,14 @@
 				version = "2.0.0-beta.2";
 			};
 		};
+		84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -438,6 +484,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84BC73BE2B0244D30086C87B /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		84C6BE3E2B060ABA00B9CB29 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		84C6BE402B060ABA00B9CB29 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		84C6BE442B061D4200B9CB29 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		84C6BE462B061D7000B9CB29 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		84C6BE482B061D8300B9CB29 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C6BE3D2B060ABA00B9CB29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
