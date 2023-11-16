@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBcktoZWRzHkkiELVT18kP6EK8N3pkBQQ8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>685722196646</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.money.fold</string>
+	<key>PROJECT_ID</key>
+	<string>expense-tracker-daf63</string>
+	<key>STORAGE_BUCKET</key>
+	<string>expense-tracker-daf63.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:685722196646:ios:aad5806a4c8ba4ed953267</string>
+</dict>
+</plist>
