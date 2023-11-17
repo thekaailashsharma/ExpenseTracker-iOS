@@ -52,9 +52,21 @@ struct ContentView: View {
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem {
-                            Image(systemName: "bell.badge")
-                                .renderingMode(.original)
-                                .foregroundStyle(Color.iconColor, .primary)
+                           
+                                FontIcon.text(FontCode.ionicon(code: .ios_log_out), fontsize: 28
+                                              ,color: .iconColor)
+                                .onTapGesture {
+                                    let firebaseAuth = Auth.auth()
+                                    do {
+                                      try firebaseAuth.signOut()
+                                        isLoginScreenVisible = true
+                                    } catch let signOutError as NSError {
+                                      print("Error signing out: %@", signOutError)
+                                    }
+                                }
+                               
+                            
+                                
                             
                         }
                     }
