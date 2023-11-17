@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseInAppMessaging
 import FirebaseMessaging
+import CoreData
 
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -78,6 +79,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 struct expenseTracker: App {
     
     @StateObject var transactionViewModel = TransactionViewModel()
+    let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @ObservedObject var appColor = AppColor()
 
@@ -85,6 +87,7 @@ struct expenseTracker: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(transactionViewModel)
         }
     }

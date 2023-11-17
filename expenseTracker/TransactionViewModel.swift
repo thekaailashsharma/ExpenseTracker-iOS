@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Collections
+import SwiftUIFontIcon
 
 typealias TransactionGroup = OrderedDictionary<String, [Transaction]>
 typealias TransactionPrefixSum = [(String, Double)]
@@ -20,6 +21,15 @@ final class TransactionViewModel: ObservableObject {
     init() {
         getTransactions()
     }
+    
+    func getFontAwesodeCode(categoryId: Int) -> FontAwesomeCode {
+        if let category = Category.all.first(where: {$0.id == categoryId }) {
+            return category.icon
+        } else {
+            return .question
+        }
+    }
+    
     
     func getTransactions() {
         guard let url = URL(string: "https://designcode.io/data/transactions.json") else {return}

@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct RecentTransactions: View {
     
     @EnvironmentObject var transactionsVM: TransactionViewModel
+    @Environment(\.managedObjectContext) private var viewContext
+//    @FetchRequest(entity: GetTransactions.entity(), sortDescriptors: []) private var getTransactions : FetchedResults<GetTransactions>
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \GetTransactions.id, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<GetTransactions>
     
     var body: some View {
         
@@ -35,12 +43,23 @@ struct RecentTransactions: View {
                 
                 // List
                 
-                    ForEach(Array(transactionsVM.transaction.prefix(5).enumerated()), id: \.element) { index, transaction in
-                        TransactionRow(transaction: transaction)
+//                    ForEach(Array(transactionsVM.transaction.prefix(5).enumerated()), id: \.element) { index, transaction in
+//                        TransactionRow(transaction: transaction)
+//
+//                        Divider()
+//                            .opacity(index == 4 ? 0 : 1)
+//                    }
+//
+//                    Divider()
+                    
+                    ForEach(Array(items.prefix(5).enumerated()), id: \.element) { index, transaction in
+                        TransactionRow(fontIcon: transactionsVM.getFontAwesodeCode(categoryId: Int(transaction.categoryId)), merchant: transaction.merchant ?? "",
+                                       category: transaction.category ?? "", dateParsed: transaction.date?.dateParsed() ?? Date(), signedAmount: Int(transaction.amount)
+                        )
                         
                         Divider()
                             .opacity(index == 4 ? 0 : 1)
-                }
+                    }
             }
             .padding()
             .background(Color.systemBackground)

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUIFontIcon
+import CoreData
 
 struct Transaction : Identifiable, Decodable, Hashable {
     let id: Int

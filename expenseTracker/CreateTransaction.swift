@@ -23,6 +23,8 @@ struct CreateTransaction: View {
     @State private var isEdited = false
     
     @State private var date = Date()
+    @Environment(\.managedObjectContext) private var viewContext
+    
     
     var body: some View {
         
@@ -158,6 +160,23 @@ struct CreateTransaction: View {
             HStack(alignment: .center) {
                 
                 Button {
+                    withAnimation {
+                        let transaction = GetTransactions(context: viewContext)
+                        transaction.id = UUID()
+                        transaction.categoryId = Int64(selectedCategory?.id ?? 1)
+                        transaction.date = date.formatted()
+                        transaction.category = selectedCategory?.name
+                        transaction.account = self.account
+                        transaction.amount = Int64(self.amount)
+                        transaction.instition = self.institution
+                        transaction.isEdited = self.isEdited
+                        transaction.isExpense = self.isExpense
+                        transaction.isPending = self.isPending
+                        transaction.isTransfer = self.isTransfer
+                        transaction.merchant = self.merchant
+                        
+                        try? viewContext.save()
+                    }
                     
                 } label: {
                     Text("Save")
