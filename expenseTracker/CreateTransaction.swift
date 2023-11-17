@@ -35,12 +35,24 @@ struct CreateTransaction: View {
             VStack {
                 Form {
                     Section {
-                        TextField("Enter Merchant name", text: $merchant)
-                            .foregroundColor(.iconColor)
-                        TextField("Enter Account name", text: $account)
-                            .foregroundColor(.iconColor)
-                        TextField("Enter Institution name", text: $institution)
-                            .foregroundColor(.iconColor)
+                        HStack {
+                            FontIcon.text(FontCode.materialIcon(code: .person_outline), fontsize: 25,color: .iconColor)
+                            TextField("Enter Merchant name", text: $merchant)
+                                .foregroundColor(.iconColor)
+                                .padding(.horizontal, 8)
+                        }
+                        HStack {
+                            FontIcon.text(FontCode.ionicon(code: .ios_wallet), fontsize: 25,color: .iconColor)
+                            TextField("Enter Account name", text: $account)
+                                .foregroundColor(.iconColor)
+                                .padding(.horizontal, 10)
+                        }
+                        HStack {
+                            FontIcon.text(FontCode.ionicon(code: .ios_home), fontsize: 25,color: .iconColor)
+                            TextField("Enter Institution name", text: $institution)
+                                .foregroundColor(.iconColor)
+                                .padding(.horizontal, 10)
+                        }
                     } header: {
                         Text("Transactions Info")
                     }
@@ -60,7 +72,7 @@ struct CreateTransaction: View {
                                         .onTapGesture {
                                             isCategorySelected.toggle()
                                         }
-                                        .padding()
+                                        .padding(.all, 10)
                                 }
                             }
                             if !(selectedCategory == nil) {
@@ -78,7 +90,7 @@ struct CreateTransaction: View {
                                         .foregroundColor(.textColor)
                                         .font(.subheadline)
                                         .bold()
-                                        .padding()
+                                        .padding(.all, 10)
                                 }
                                 .onTapGesture {
                                     isCategorySelected.toggle()
@@ -98,52 +110,71 @@ struct CreateTransaction: View {
                     }
                     
                     Section {
-                        Toggle(isOn: $isPending) {
-                            Text("Is Pending")
-                                .foregroundColor(.textColor)
-                                .font(.subheadline)
-                                .foregroundColor(.white)
+                        HStack {
+                            FontIcon.text(FontCode.materialIcon(code: .account_balance_wallet), fontsize: 25,color: .iconColor)
+                            Toggle(isOn: $isPending) {
+                                Text("Is Pending")
+                                    .foregroundColor(.textColor)
+                                    .font(.subheadline)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.all, 5)
+                            .tint(.iconColor)
                         }
-                        .padding(.all, 5)
-                        .tint(.iconColor)
                         
-                        Toggle(isOn: $isTransfer) {
-                            Text("Is Transfer")
-                                .foregroundColor(.textColor)
-                                .font(.subheadline)
-                                .foregroundColor(.white)
+                        HStack {
+                            FontIcon.text(FontCode.materialIcon(code: .transfer_within_a_station), fontsize: 25,color: .iconColor)
+                            
+                            Toggle(isOn: $isTransfer) {
+                                Text("Is Transfer")
+                                    .foregroundColor(.textColor)
+                                    .font(.subheadline)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.all, 5)
+                            .tint(.iconColor)
                         }
-                        .padding(.all, 5)
-                        .tint(.iconColor)
                         
-                        Toggle(isOn: $isExpense) {
-                            Text("Is Expense")
-                                .foregroundColor(.textColor)
-                                .font(.subheadline)
-                                .foregroundColor(.white)
+                        HStack {
+                            FontIcon.text(FontCode.awesome5Solid(code: .credit_card), fontsize: 25,color: .iconColor)
+                            
+                            Toggle(isOn: $isExpense) {
+                                Text("Is Expense")
+                                    .foregroundColor(.textColor)
+                                    .font(.subheadline)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.all, 5)
+                            .tint(.iconColor)
                         }
-                        .padding(.all, 5)
-                        .tint(.iconColor)
                         
-                        Toggle(isOn: $isEdited) {
-                            Text("Is Edited")
-                                .foregroundColor(.textColor)
-                                .font(.subheadline)
-                                .foregroundColor(.white)
+                        HStack {
+                            FontIcon.text(FontCode.materialIcon(code: .mode_edit), fontsize: 25,color: .iconColor)
+                            Toggle(isOn: $isEdited) {
+                                Text("Is Edited")
+                                    .foregroundColor(.textColor)
+                                    .font(.subheadline)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.all, 5)
+                            .tint(.iconColor)
                         }
-                        .padding(.all, 5)
-                        .tint(.iconColor)
                         
                     } header: {
                         Text("Choose Type")
                     }
                     
                     Section {
-                        DatePicker("Choose Date", selection: $date, displayedComponents: .date)
-                            .foregroundColor(.iconColor)
-                        
-                        TextField("Enter your score", value: $amount, format: .number)
-                            .foregroundColor(.iconColor)
+                        HStack {
+                            FontIcon.text(FontCode.ionicon(code: .ios_today), fontsize: 25,color: .iconColor)
+                            DatePicker("Choose Date", selection: $date, displayedComponents: .date)
+                                .foregroundColor(.iconColor)
+                        }
+                        HStack {
+                            FontIcon.text(FontCode.ionicon(code: .ios_cash), fontsize: 25,color: .iconColor)
+                            TextField("Enter your score", value: $amount, format: .number)
+                                .foregroundColor(.iconColor)
+                        }
                         
                     } header: {
                         Text("Amount & Date")
@@ -165,22 +196,22 @@ struct CreateTransaction: View {
                     
                     Button {
                         
-                        let transaction = GetTransactions(context: viewContext)
-                        transaction.id = UUID()
-                        transaction.categoryId = Int64(selectedCategory?.id ?? 1)
-                        transaction.date = date.formatted()
-                        transaction.category = selectedCategory?.name
-                        transaction.account = self.account
-                        transaction.amount = Int64(self.amount)
-                        transaction.instition = self.institution
-                        transaction.isEdited = self.isEdited
-                        transaction.isExpense = self.isExpense
-                        transaction.isPending = self.isPending
-                        transaction.isTransfer = self.isTransfer
-                        transaction.merchant = self.merchant
-                        
-                        try? viewContext.save()
-                        isAnimationVisible = true
+//                        let transaction = GetTransactions(context: viewContext)
+//                        transaction.id = UUID()
+//                        transaction.categoryId = Int64(selectedCategory?.id ?? 1)
+//                        transaction.date = date.formatted()
+//                        transaction.category = selectedCategory?.name
+//                        transaction.account = self.account
+//                        transaction.amount = Int64(self.amount)
+//                        transaction.instition = self.institution
+//                        transaction.isEdited = self.isEdited
+//                        transaction.isExpense = self.isExpense
+//                        transaction.isPending = self.isPending
+//                        transaction.isTransfer = self.isTransfer
+//                        transaction.merchant = self.merchant
+//
+//                        try? viewContext.save()
+//                        isAnimationVisible = true
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4){
                             isAnimationVisible = false
