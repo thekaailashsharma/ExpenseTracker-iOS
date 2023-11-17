@@ -21,9 +21,12 @@ struct CreateTransaction: View {
     @State private var isTransfer = false
     @State private var isExpense = false
     @State private var isEdited = false
+   
     
     @State private var date = Date()
     @Environment(\.managedObjectContext) private var viewContext
+    
+    @State private var isAnimationVisible = false
     
     
     var body: some View {
@@ -154,13 +157,14 @@ struct CreateTransaction: View {
                 
                 
             }
+            .blur(radius: isAnimationVisible ? 5 : 0)
             
             Spacer()
-            
-            HStack(alignment: .center) {
-                
-                Button {
-                    withAnimation {
+            withAnimation {
+                HStack(alignment: .center) {
+                    
+                    Button {
+                        
                         let transaction = GetTransactions(context: viewContext)
                         transaction.id = UUID()
                         transaction.categoryId = Int64(selectedCategory?.id ?? 1)
@@ -176,18 +180,45 @@ struct CreateTransaction: View {
                         transaction.merchant = self.merchant
                         
                         try? viewContext.save()
+                        isAnimationVisible = true
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 4){
+                            isAnimationVisible = false
+                            merchant = ""
+                            account = ""
+                            amount = 0
+                            institution = ""
+                            isCategorySelected = false
+                            selectedCategory = nil
+                            isPending = false
+                            isTransfer = false
+                            isExpense = false
+                            isEdited = false
+                            date = Date()
+                        }
+                        
+                    } label: {
+                        Text("Save")
+                            .foregroundColor(.textColor)
+                            .font(.title3)
                     }
+                    .buttonStyle(.bordered)
+                    .background(.background)
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
                     
-                } label: {
-                    Text("Save")
-                        .foregroundColor(.textColor)
-                        .font(.title3)
+                    
                 }
-                .buttonStyle(.bordered)
-                .background(.background)
-
-                
             }
+            
+            if isAnimationVisible {
+                VStack(alignment: .center) {
+                    SwiftLottieAnimation(url: Bundle.main.url(forResource: "saved", withExtension: "lottie")!, loopMode: .loop)
+                        .scaledToFit()
+                }
+                .frame(maxHeight: .infinity)
+            }
+            
+            
         }
     }
 }

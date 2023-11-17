@@ -39,6 +39,7 @@
 		84E114C62B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E114C52B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift */; };
 		84E114CC2B07BDB8003C2EB4 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E114CB2B07BDB8003C2EB4 /* DataContainer.swift */; };
 		84E114F52B07D3BB003C2EB4 /* GetTransactions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E114F32B07D3BB003C2EB4 /* GetTransactions.xcdatamodeld */; };
+		84E114FC2B07E676003C2EB4 /* saved.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 84E114FB2B07E676003C2EB4 /* saved.lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		84E114C52B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryBottomSheet.swift; sourceTree = "<group>"; };
 		84E114CB2B07BDB8003C2EB4 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		84E114F42B07D3BB003C2EB4 /* GetTransactions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetTransactions.xcdatamodel; sourceTree = "<group>"; };
+		84E114FB2B07E676003C2EB4 /* saved.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; name = saved.lottie; path = ../../../Downloads/saved.lottie; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				843701C52AFFE7D20038B1C7 /* ContentView.swift */,
 				84C6BE552B0625CD00B9CB29 /* login.lottie */,
 				84BC73C12B0244FB0086C87B /* ChartView.swift */,
+				84E114FB2B07E676003C2EB4 /* saved.lottie */,
 				84E114C52B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift */,
 				84E114F32B07D3BB003C2EB4 /* GetTransactions.xcdatamodeld */,
 				84BC73B72B023DAE0086C87B /* All Transactions.swift */,
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E114FC2B07E676003C2EB4 /* saved.lottie in Resources */,
 				84C6BE562B0625CD00B9CB29 /* login.lottie in Resources */,
 				843701CB2AFFE7D60038B1C7 /* Preview Assets.xcassets in Resources */,
 				843701C82AFFE7D60038B1C7 /* Assets.xcassets in Resources */,
