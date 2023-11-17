@@ -54,9 +54,12 @@ struct LoginUI: View {
                         .animation(.easeInOut)
                 }
                 
+                Image(isCodeSent ? "Login": "otp")
+                    .padding(.all, 55)
                 
-                SwiftLottieAnimation(url: Bundle.main.url(forResource: "login", withExtension: "lottie")!, loopMode: .loop)
-                    .scaleEffect(2)
+                
+//                SwiftLottieAnimation(url: Bundle.main.url(forResource: "login", withExtension: "lottie")!, loopMode: .loop)
+//                    .scaleEffect(2)
                 
                 
                 
