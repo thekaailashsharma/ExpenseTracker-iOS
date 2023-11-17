@@ -9,6 +9,7 @@ import SwiftUI
 import AuthenticationServices
 import Firebase
 import Combine
+import SwiftUIFontIcon
 
 struct ContentView: View {
     @EnvironmentObject var transactionViewModel: TransactionViewModel
@@ -19,49 +20,71 @@ struct ContentView: View {
     
     var body: some View {
         if (!(isLoginScreenVisible ?? true)) {
-            NavigationView {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 24) {
-                        Text("Overview")
-                            .font(.title2)
-                            .bold()
-                        
-                        Button {
-                            isLoginScreenVisible = true
-                        } label: {
-                            if (isLoginScreenVisible ?? true){
-                                Text("true")
-                            } else {
-                                Text("false")
+            TabView {
+                NavigationView {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 24) {
+                            Text("Overview")
+                                .font(.title2)
+                                .bold()
+                            
+                            Button {
+                                isLoginScreenVisible = true
+                            } label: {
+                                if (isLoginScreenVisible ?? true){
+                                    Text("true")
+                                } else {
+                                    Text("false")
+                                }
+                                
                             }
                             
+                            
+                            ChartView()
+                            
+                            RecentTransactions()
+                            
                         }
-                        
-                        
-                        ChartView()
-                        
-                        RecentTransactions()
-                        
+                        .padding()
+                        .frame(maxWidth: .infinity)
                     }
-                    .padding()
-                    .frame(maxWidth: .infinity)
+                    .background(Color.background)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem {
+                            Image(systemName: "bell.badge")
+                                .renderingMode(.original)
+                                .foregroundStyle(Color.iconColor, .primary)
+                            
+                        }
+                    }
+                    
+                    
                 }
-                .background(Color.background)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem {
-                        Image(systemName: "bell.badge")
-                            .renderingMode(.original)
-                            .foregroundStyle(Color.iconColor, .primary)
+                .animation(.easeIn, value: isLoginScreenVisible)
+                .navigationViewStyle(.stack)
+                .tint(.primary)
+                .tabItem {
+                    Button {
                         
+                    } label: {
+                        Image(systemName: "house")
+                        Text("Home")
                     }
+
                 }
                 
-                
+                CreateTransaction()
+                    .tabItem {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "wallet.pass")
+                            Text("Home")
+                        }
+                    }
             }
-            .animation(.easeIn, value: isLoginScreenVisible)
-            .navigationViewStyle(.stack)
-            .tint(.primary)
+            .tint(.iconColor)
             
             
         } else {

@@ -13,6 +13,7 @@
 		843701C82AFFE7D60038B1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843701C72AFFE7D60038B1C7 /* Assets.xcassets */; };
 		843701CB2AFFE7D60038B1C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843701CA2AFFE7D60038B1C7 /* Preview Assets.xcassets */; };
 		847798D92B0135FC00DD21A8 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847798D82B0135FC00DD21A8 /* TransactionViewModel.swift */; };
+		847F41A22B07A3E700BCEEB8 /* CreateTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F41A12B07A3E700BCEEB8 /* CreateTransaction.swift */; };
 		84A557562B00D9D400F76ED1 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A557552B00D9D400F76ED1 /* Transactions.swift */; };
 		84A557582B00E29E00F76ED1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A557572B00E29E00F76ED1 /* PreviewData.swift */; };
 		84A5575A2B00E3F500F76ED1 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A557592B00E3F500F76ED1 /* TransactionRow.swift */; };
@@ -35,6 +36,7 @@
 		84C6BE562B0625CD00B9CB29 /* login.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 84C6BE552B0625CD00B9CB29 /* login.lottie */; };
 		84C6BE582B062CEE00B9CB29 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6BE572B062CEE00B9CB29 /* LoginViewModel.swift */; };
 		84C6BE5A2B06348A00B9CB29 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6BE592B06348A00B9CB29 /* Countries.swift */; };
+		84E114C62B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E114C52B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		843701C72AFFE7D60038B1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843701CA2AFFE7D60038B1C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		847798D82B0135FC00DD21A8 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		847F41A12B07A3E700BCEEB8 /* CreateTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransaction.swift; sourceTree = "<group>"; };
 		84A557552B00D9D400F76ED1 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		84A557572B00E29E00F76ED1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		84A557592B00E3F500F76ED1 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		84C6BE552B0625CD00B9CB29 /* login.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = login.lottie; sourceTree = "<group>"; };
 		84C6BE572B062CEE00B9CB29 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		84C6BE592B06348A00B9CB29 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		84E114C52B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategoryBottomSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 				843701C52AFFE7D20038B1C7 /* ContentView.swift */,
 				84C6BE552B0625CD00B9CB29 /* login.lottie */,
 				84BC73C12B0244FB0086C87B /* ChartView.swift */,
+				84E114C52B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift */,
 				84BC73B72B023DAE0086C87B /* All Transactions.swift */,
+				847F41A12B07A3E700BCEEB8 /* CreateTransaction.swift */,
 				84BC73B52B021B410086C87B /* RecentTransactions.swift */,
 				843701C72AFFE7D60038B1C7 /* Assets.xcassets */,
 				84C6BE3B2B0609D600B9CB29 /* GoogleService-Info.plist */,
@@ -253,6 +259,8 @@
 				84C6BE4D2B06216A00B9CB29 /* LoginUI.swift in Sources */,
 				84BC73C22B0244FB0086C87B /* ChartView.swift in Sources */,
 				84C6BE542B06247600B9CB29 /* LottieAnimation.swift in Sources */,
+				847F41A22B07A3E700BCEEB8 /* CreateTransaction.swift in Sources */,
+				84E114C62B07AB15003C2EB4 /* ChooseCategoryBottomSheet.swift in Sources */,
 				84A5575A2B00E3F500F76ED1 /* TransactionRow.swift in Sources */,
 				84A557562B00D9D400F76ED1 /* Transactions.swift in Sources */,
 				84C6BE582B062CEE00B9CB29 /* LoginViewModel.swift in Sources */,

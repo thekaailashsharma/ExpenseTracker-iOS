@@ -70,7 +70,7 @@ extension Category {
     
     
     static let publicTransportation = Category(id: 101, name: "Public Transportation", icon: .bus, mainCategoryID: 1)
-    static let taxi = Category(id: 102, name: "taxi", icon: .taxi, mainCategoryID: 1)
+    static let taxi = Category(id: 102, name: "Taxi", icon: .taxi, mainCategoryID: 1)
     static let mobilePhone = Category(id: 201, name: "Mobile Phone", icon: .mobile_alt, mainCategoryID: 2)
     static let moviesAndDVD = Category(id: 301, name: "Movies And DVD", icon: .film, mainCategoryID: 3)
     static let bankFees = Category(id: 401, name: "Bank Fees", icon: .hand_holding_usd, mainCategoryID: 4)
